@@ -26,6 +26,25 @@ router.delete("/:cid",(req,res)=>{
     })
 })
 router.post("/",(req,res)=>{
+    console.log("获取请求的数据");
     console.log(req.body);
+    var data=req.body;
+    pool.query("insert into xfn_category set ?",data,(err,result)=>{
+        if(err) throw err;
+        res.send({code:200,msg:"1 category added "})
+    })
 })
-
+router.put("/",(req,res)=>{
+    var data=req.body;//请求数据
+    pool.query("update xfn_category set ? where cid=?",[data,data.cid],(err,result)=>{
+        if(err) throw err;
+        console.log(result);
+        if(result.changedRows>0){
+            res.send({code:200,msg:'1 category modified'})
+        }else if(result.affectedRows==0){
+            res.send({code:400,msg:'category not exits'})
+        }else if(result.affectedRows==1&&result.changedRows==0){
+            res.send({code:401,msg:'no category modified'})
+        }
+    })
+})

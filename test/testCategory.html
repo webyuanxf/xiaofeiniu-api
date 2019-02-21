@@ -28,6 +28,24 @@
                 console.log(err);
             })
         }
+        btn3.onclick=function(){
+            var data={cname:'恐龙类'};
+            axios.post("http://127.0.0.1:8090/admin/category",data).then(result=>{
+                console.log("添加类别成功");
+                console.log(result.data);
+            }).catch(err=>{
+                console.log(err);
+            })
+        }
+        btn4.onclick=function(){
+            var data={cid:60,cname:"恐龙类"};
+            axios.put("http://127.0.0.1:8090/admin/category",data).then(result=>{
+                console.log("添加类别成功");
+                console.log(result.data);
+            }).catch(err=>{
+                console.log(err);
+            })
+        }
     </script>
 </body>
 </html>
