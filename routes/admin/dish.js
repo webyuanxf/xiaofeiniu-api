@@ -76,9 +76,3 @@ function randFileName(suffix){
 *POST /admin/dish
 *添加一个新的菜品
 */
-router.post("/",(req,res)=>{
-  pool.query("insert into xfn_dish set ?",[req.body],(err,result)=>{
-    if(err) throw err;
-    res.send({code:200,msg:"dish added succ",dishId:result.insertId});
-  })
-})
