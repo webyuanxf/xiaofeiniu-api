@@ -1,16 +1,16 @@
 {
   "name": "xiaofeiniu-api",
   "version": "1.0.0",
-  "description": "小肥牛的扫码点餐数据API子系统",
+  "description": "小肥牛扫码点餐数据API子系统",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./index.js",
-    "dev": "node-dev ./index.js"
+    "start": "node  ./index.js",
+    "dev": "node-dev  ./index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webyuanxf/xiaofeiniu-api.git"
+    "url": "git+https://github.com/web1808/xiaofeiniu-api.git"
   },
   "keywords": [
     "小肥牛",
@@ -18,12 +18,12 @@
     "扫码",
     "点餐"
   ],
-  "author": "yuanxf",
+  "author": "Li Wenhua",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/webyuanxf/xiaofeiniu-api/issues"
+    "url": "https://github.com/web1808/xiaofeiniu-api/issues"
   },
-  "homepage": "https://github.com/webyuanxf/xiaofeiniu-api#readme",
+  "homepage": "https://github.com/web1808/xiaofeiniu-api#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
